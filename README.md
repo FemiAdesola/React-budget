@@ -23,10 +23,10 @@ saving target.
 
 Be creative with your style!
 
-![demo1](https://github.com/Integrify-Finland/bof-budget-control-app/blob/main/Screenshot%202022-10-10%20at%2017.26.52.png)
+![demo1](/Screenshot%202022-10-10%20at%2017.26.52.png)
 ---
 
-![demo2](https://github.com/Integrify-Finland/bof-budget-control-app/blob/main/Screenshot%202022-10-10%20at%2017.28.16.png)
+![demo2](/Screenshot%202022-10-10%20at%2017.28.16.png)
 ---
 
-![demo3](https://github.com/Integrify-Finland/bof-budget-control-app/blob/main/Screenshot%202022-10-10%20at%2017.44.06.png)
+![demo3](/Screenshot%202022-10-10%20at%2017.44.06.png)
