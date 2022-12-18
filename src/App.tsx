@@ -8,7 +8,7 @@ function App() {
   return (
     <div className='Main'>
         <div className="App">
-          <Income />
+          <Income incomeAmount={0} incomeSource={''} incomeDate={undefined} id={0}  />
           <Expenses />
           <Target/>
       </div>
