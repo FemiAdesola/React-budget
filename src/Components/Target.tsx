@@ -1,6 +1,8 @@
 import React from 'react';
 
 const Target = () => {
+    let saving = 50;
+    let target = 2000;
     return (
         <div className="set-target">
             <form action="#">
@@ -21,7 +23,7 @@ const Target = () => {
                 </div>
                 <div className='Source'>
                     <label htmlFor="progress">progress   
-                        <progress id="file" value="35" max="100"> 32% </progress>
+                        <progress id="file" value={saving} max={target}> 32% </progress>
                     </label>
                 </div>
             </form>
