@@ -1,21 +1,23 @@
 import React, { useState } from 'react';
 
 import { BalanceProps } from '../types/Balance';
+import Transfer from './Transfer';
 
-const Balance = ({ balance, setSaving }: BalanceProps) => {
-    const [amount, setAmount] = useState(0)
-    const submitHandler = (e: React.FormEvent<HTMLFormElement>) => {
-        e.preventDefault ()
-        if (balance < amount) {
-            throw new Error("You do not have anough money")
-        }
-        setSaving((prev) => prev + amount)
-    }
+const Balance = ({ balance, transferMoney }: BalanceProps) => {
+    // const [amount, setAmount] = useState(0)
+    // const submitHandler = (e: React.FormEvent<HTMLFormElement>) => {
+    //     e.preventDefault ()
+    //     if (balance < amount) {
+    //         throw new Error("You do not have anough money")
+    //     }
+    //     transferMoney(amount)
+    // }
 
     return (
         <div className="account-balance">
             <h3>Current balance: {balance}</h3>
-            <form onSubmit={(e)=>submitHandler(e)}>
+            <Transfer transferMoney={transferMoney} destination="Saving"/>
+            {/* <form onSubmit={(e)=>submitHandler(e)}>
                 <div className='balance-source'>
                     <label htmlFor="saving-input"> Transfer to saving account</label>
                     <input type="number" 
@@ -27,7 +29,7 @@ const Balance = ({ balance, setSaving }: BalanceProps) => {
                     ></input>
                      <button type='submit'>Transfer</button>
                 </div>
-            </form>
+            </form> */}
         </div>
     );
 };

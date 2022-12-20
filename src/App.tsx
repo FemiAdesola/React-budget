@@ -6,6 +6,7 @@ import TargetSaving from './Components/TargetSaving';
 import Balance from './Components/Balance';
 import { BudgetType } from './types/Budget';
 import Header from './Components/Header';
+import { Destination } from './types/transfer';
 
 const  App = () =>{
   const incomeList: BudgetType[] = JSON.parse(localStorage.getItem("incomes") || "")
@@ -14,8 +15,6 @@ const  App = () =>{
   const [expenses, setExpenses] = useState<BudgetType[]>(expenseList)
   const [balance, setBalance] = useState(0)
   const [saving, setSaving] = useState(0)
- 
-  
  
   useEffect(() => {
     const totalIncomes = incomes.reduce((prev, current) => prev + current.amount, 0)
@@ -31,6 +30,18 @@ const  App = () =>{
     localStorage.setItem("expenses", JSON.stringify(expenses))
   }, [expenses])
 
+  const transferMoney = (amount: number, destination: Destination) => {
+    if (destination ==="Balance") {
+      amount = -amount
+    }
+    if (balance - amount >= 0) {
+      setSaving((prev) => prev + amount)
+    } else {
+      if (balance < amount) { 
+        throw new Error("You do not have enough money to transfer")
+      }
+    }
+  }
 
   return ( 
     <div className='Main'>
@@ -38,10 +49,10 @@ const  App = () =>{
         <div className="App">
           <Budget option='Income' list={incomes} setList={setIncomes} balance={balance} />
           <Budget option='Expense' list={expenses} setList={setExpenses} balance={balance} />
-          <TargetSaving saving={saving} />
+        <TargetSaving saving={saving} transferMoney={transferMoney } />
       </div>
       <hr/>
-      <Balance balance={balance} setSaving={setSaving} />
+      <Balance balance={balance} transferMoney={transferMoney} />
     </div>
   );
 }

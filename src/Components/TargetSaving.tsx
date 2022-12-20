@@ -1,7 +1,9 @@
-import React,{useState} from 'react';
-import { TargetSavingProps } from '../types/TargetSaving';
+import React, { useState } from 'react';
 
-const TargetSaving = ({saving}: TargetSavingProps) => {
+import { TargetSavingProps } from '../types/TargetSaving';
+import Transfer from './Transfer';
+
+const TargetSaving = ({saving, transferMoney}: TargetSavingProps) => {
     const [target, setTarget]= useState(0)
     
     return (
@@ -30,6 +32,7 @@ const TargetSaving = ({saving}: TargetSavingProps) => {
                         <progress id="file" value={saving} max={target}></progress>
                     </label>
                 </div>
+                <Transfer transferMoney={transferMoney} destination="Balance"/>
             </form>
         </div>
     );
