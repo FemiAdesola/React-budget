@@ -1,4 +1,4 @@
-input
+input, select
 {
     font-family: "Special Elite", cursive;
     padding: 10px;
@@ -8,4 +8,16 @@ input
     height: 40px;
     border-color:#e4eaea;
     margin: 0 5px;
+}
+
+select
+{
+    font-family:'Courier New', Courier, monospace;
+    padding: 0px;
+    border-radius: 10px;
+    outline: none;
+    width: 80%;
+    height: 40px;
+    border-color:#e4eaea;
+    margin: 20px;
 }

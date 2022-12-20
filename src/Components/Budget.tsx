@@ -8,7 +8,8 @@ const Budget = ({ option, list, setList, balance }: BudgetProps) => {
     const [amount,setAmount] = useState (0)
     const [date, setDate] = useState("")
     const [error, setError] = useState("")
-
+    const incomeOptions = ["Salary", "Gift", "Selling", "Bonus","Tax return", "Others"]
+     const expenseOptions = ["House rent","Water bill", "Eletricity", "School fees", "Daycare fee", "Others"]
     const handleSubmit = (e: React. FormEvent <HTMLFormElement>) =>{
         e.preventDefault()
         const id = uuid4()
@@ -33,13 +34,24 @@ const Budget = ({ option, list, setList, balance }: BudgetProps) => {
                 <form onSubmit={(e)=>handleSubmit(e)}>
                     <div className='Source'>
                         <label htmlFor="source-input"> {option} Source</label>
-                        <input type="text" 
+                        <select
+                            name="source-inpui"
+                            id="source-inpu"
+                            value={source}
+                            onChange={(e) => setSource(e.target.value)}
+                        >
+                            {option === "Expense" ?
+                                expenseOptions.map(option => (<option>{option}</option>) ) :
+                                incomeOptions.map(option => (<option>{option}</option>))
+                            }
+                        </select>
+                        {/* <input type="text" 
                             className="source-input" 
                             id="source-input"  
                             placeholder={`Type the ${option} here`}
                             value={source}
                             onChange={(e) => setSource(e.target.value)}
-                        />
+                        /> */}
                     </div>
                     <div className='Source'>
                         <label htmlFor="amount-input">Amount of {option}</label>
