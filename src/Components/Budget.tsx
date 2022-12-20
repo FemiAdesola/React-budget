@@ -27,6 +27,9 @@ const Budget = ({ option, list, setList, balance }: BudgetProps) => {
         setList ([...list, BudgetItem])
     }
 
+    const deleteHandler = (id: string) => {
+        setList((prev) => prev.filter(item => item.id !== id))
+    }
     return (
         <div>
             <div className="Budget-source">
@@ -86,14 +89,23 @@ const Budget = ({ option, list, setList, balance }: BudgetProps) => {
                         <th>Date</th>
                         <th>Source of {option}</th>
                         <th>{option} €</th>
+                         <th></th>
                     </tr>
                 </thead>
                 <tbody>
-                {list.map(list => (
+                {list.map((list)=> (
                     <tr key={list.id}>
                         <td>{list.date}</td>
                         <td>{list.source}</td>
                         <td>{list.amount}</td>
+                        <td>
+                            <button>Edit</button>
+                            <button
+                                onClick={() => deleteHandler(list.id)}
+                                disabled={option === "Income" && balance - list.amount < 0}>
+                                Delete
+                            </button>
+                        </td>
                     </tr>
                 ))}    
                 </tbody>

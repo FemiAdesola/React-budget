@@ -46,6 +46,12 @@ button:hover {
   color: white;
 }
 
+table td button {
+  width: 50px;
+  padding: 2px 6px;
+  font-size: 10px;
+}
+
 input, select {
   font-family: "Special Elite", cursive;
   padding: 10px;
@@ -132,7 +138,7 @@ table {
   margin-bottom: 1em;
   box-shadow: 0 0 5px gray;
   text-align: center;
-  margin-left: 50px;
+  margin-left: 10px;
 }
 
 table, th, td {
