@@ -57,11 +57,27 @@ input {
   margin: 0 5px;
 }
 
-.Budget-source,
-.set-target {
+.Budget-source {
   margin: 20px;
   box-shadow: 0 3px 5px 7px lightgray, 0 6px 2px 0;
   border-radius: 5px;
+}
+
+.Budget-source h1 {
+  padding-top: 20px;
+  margin-bottom: -20px;
+}
+
+.set-target {
+  margin: 20px;
+  border-radius: 5px;
+}
+
+.progress {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  font-size: 20px;
 }
 
 .App-content {
@@ -98,6 +114,27 @@ label {
 
 .account-balance form {
   margin-top: -50px;
+}
+
+/* ######  table for all the moped storage  ##### */
+table {
+  margin-bottom: 1em;
+  box-shadow: 0 0 5px gray;
+  text-align: center;
+  margin-left: 50px;
+}
+
+table, th, td {
+  border: 1px solid gray;
+  padding: 0.5em;
+}
+
+thead {
+  background-color: #919c9c;
+}
+
+tr:nth-child(2n) {
+  background-color: lightgray;
 }
 
 /*# sourceMappingURL=App.css.map */

@@ -25,8 +25,8 @@ const TargetSaving = ({saving}: TargetSavingProps) => {
                     <p> Current Target: <span>{target}</span></p>
                 </div>
                 <div className='Source'>
-                    <p>{saving/target * 100 || 0}</p>
-                    <label htmlFor="progress">progress   
+                    <label htmlFor="progress" className='progress'>progress
+                        <p>{saving/target * 100 || 0}% </p>    
                         <progress id="file" value={saving} max={target}></progress>
                     </label>
                 </div>

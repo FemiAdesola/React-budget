@@ -1,0 +1,20 @@
+/* ######  table for all the moped storage  ##### */
+table{
+    // border-collapse: collapse;
+    margin-bottom: 1em;
+    box-shadow: 0 0 5px gray;
+    text-align: center;
+    margin-left: 50px;
+}
+
+table,th,td{
+    border: 1px solid gray;
+    padding: 0.5em;
+}
+thead{
+background-color: #919c9c;
+}
+
+tr:nth-child(2n){
+    background-color: lightgray;
+}

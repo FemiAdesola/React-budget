@@ -4,15 +4,14 @@ import './App.css';
 import Budget from './Components/Budget';
 import TargetSaving from './Components/TargetSaving';
 import Balance from './Components/Balance';
-import { BudgetType} from './types/Budget';
-
-
+import { BudgetType } from './types/Budget';
+import Header from './Components/Header';
 
 const  App = () =>{
-  // const incomeList: BudgetType[] = JSON.parse(localStorage.getItem("incomes") || "")
-  // const expenseList: BudgetType [] = JSON.parse(localStorage.getItem("expenses") || "")
-  const [incomes, setIncomes] = useState<BudgetType[]> ([])
-  const [expenses, setExpenses] = useState<BudgetType[]>([])
+  const incomeList: BudgetType[] = JSON.parse(localStorage.getItem("incomes") || "")
+  const expenseList: BudgetType [] = JSON.parse(localStorage.getItem("expenses") || "")
+  const [incomes, setIncomes] = useState<BudgetType[]> (incomeList)
+  const [expenses, setExpenses] = useState<BudgetType[]>(expenseList)
   const [balance, setBalance] = useState(0)
   const [saving, setSaving] = useState(0)
  
@@ -35,10 +34,11 @@ const  App = () =>{
 
   return ( 
     <div className='Main'>
+      <Header/>
         <div className="App">
-        <Budget option='Income' list={incomes} setList={setIncomes} balance={balance} />
-        <Budget option='Expense' list={expenses} setList={setExpenses} balance={balance} />
-        <TargetSaving saving={saving} />
+          <Budget option='Income' list={incomes} setList={setIncomes} balance={balance} />
+          <Budget option='Expense' list={expenses} setList={setExpenses} balance={balance} />
+          <TargetSaving saving={saving} />
       </div>
       <hr/>
       <Balance balance={balance} setSaving={setSaving} />

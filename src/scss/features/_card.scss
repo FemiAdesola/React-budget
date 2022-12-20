@@ -1,7 +1,22 @@
-.Budget-source,
-.set-target{
+.Budget-source
+{
     margin: 20px;
     box-shadow: 0 3px 5px 7px lightgray, 0 6px 2px 0 ;
-    // width: 50%;
     border-radius: 5px;
+}
+
+.Budget-source h1{
+    padding-top: 20px;
+    margin-bottom: -20px;
+}
+
+.set-target{
+    margin: 20px;
+    border-radius: 5px;
+}
+.progress{
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    font-size: 20px;
 }
