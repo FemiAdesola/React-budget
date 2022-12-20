@@ -14,9 +14,3 @@ export interface BudgetType{
 }
 
 
-export interface MoneyFormProps {
-    option: "Income" | "Expense"
-    balance: number,
-    setList: React.Dispatch<React.SetStateAction<BudgetType[]>>,
-    item?: BudgetType
-}

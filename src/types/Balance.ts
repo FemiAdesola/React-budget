@@ -6,4 +6,4 @@ export interface BalanceProps {
     
     transferMoney: (amount: number, destination: Destination) => void
 }
- 
+
