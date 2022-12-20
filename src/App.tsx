@@ -37,9 +37,7 @@ const  App = () =>{
     if (balance - amount >= 0) {
       setSaving((prev) => prev + amount)
     } else {
-      if (balance < amount) { 
         throw new Error("You do not have enough money to transfer")
-      }
     }
   }
 
@@ -49,9 +47,9 @@ const  App = () =>{
         <div className="App">
           <Budget option='Income' list={incomes} setList={setIncomes} balance={balance} />
           <Budget option='Expense' list={expenses} setList={setExpenses} balance={balance} />
-        <TargetSaving saving={saving} transferMoney={transferMoney } />
+        <TargetSaving saving={saving} transferMoney={transferMoney} />
       </div>
-      <hr/>
+    <hr/>
       <Balance balance={balance} transferMoney={transferMoney} />
     </div>
   );
