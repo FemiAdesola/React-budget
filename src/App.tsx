@@ -50,7 +50,9 @@ const  App = () =>{
         <TargetSaving saving={saving} transferMoney={transferMoney} />
       </div>
     <hr/>
-      <Balance balance={balance} transferMoney={transferMoney} />
+      <div>
+         <Balance balance={balance} transferMoney={transferMoney} />
+      </div>
     </div>
   );
 }

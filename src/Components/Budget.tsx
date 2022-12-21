@@ -20,7 +20,7 @@ const Budget = ({ option, list, setList, balance }: BudgetProps) => {
                 <thead>
                     <tr>
                         <th>Date</th>
-                        <th>Source of {option}</th>
+                        <th> {option} source</th>
                         <th>{option} €</th>
                          <th></th>
                     </tr>
