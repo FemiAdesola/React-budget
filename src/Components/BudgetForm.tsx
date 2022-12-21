@@ -61,7 +61,7 @@ const BudgetForm = ({ option, setList, balance, item, change, setChange}: Budget
             <div>
                 <form onSubmit={(e) => handleSubmit(e)}>
                     <div className='Source'>
-                        <label htmlFor="source-input"> {option} Source</label>
+                        <label htmlFor="source-input"> Source of {option}</label>
                         <select
                             name="source-inpui"
                             id="source-input"
@@ -97,7 +97,7 @@ const BudgetForm = ({ option, setList, balance, item, change, setChange}: Budget
                         />
                     </div>
                     <div>
-                        <button type='submit'>Add Expense</button>
+                    <button type='submit'>Add {option}</button>
                     </div>
                     {error && <p>{error}</p>}
                 </form>
