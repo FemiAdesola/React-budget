@@ -5,8 +5,6 @@ import { BudgetType } from '../types/Budget'
 import { BudgetFormProps } from '../types/budgetForm'
 import { useEffect } from 'react';
 
-
-
 const BudgetForm = ({ option, setList, balance, item, change, setChange}: BudgetFormProps) => {
     const [source, setSource] = useState("")
     const [amount, setAmount] = useState(0)
@@ -59,8 +57,7 @@ const BudgetForm = ({ option, setList, balance, item, change, setChange}: Budget
         setDate("")
         setSource("Salary")
     }   
-    
-        return (
+    return (
             <div>
                 <form onSubmit={(e) => handleSubmit(e)}>
                     <div className='Source'>
@@ -105,7 +102,7 @@ const BudgetForm = ({ option, setList, balance, item, change, setChange}: Budget
                     {error && <p>{error}</p>}
                 </form>
             </div>
-        )
+    )
 }
 
 export default BudgetForm

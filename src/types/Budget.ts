@@ -5,12 +5,9 @@ export interface BudgetProps {
     balance: number
    
 }
-
 export interface BudgetType{
     id: string,
     source: string,
     amount: number,
     date:string,
 }
-
-
