@@ -89,3 +89,4 @@ This budget application aims to help users create and manage their income and ex
 ## Getting started
 
 - Check more by clicking this [link](/Note.md#home-page):
+- Click this [link](/Note.md#delete-local-strorage-settings) to get information on how to delete localstorage

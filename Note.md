@@ -55,3 +55,16 @@
 - In a situation where the addition of expenses would cause the current balance to become negative, the user will not be able to add any expense and the delete button inside the income item will become disabled to prevent the user from deleting them.
 
 ![Deleted](/img/Delete.png)
+
+
+## Delete local strorage settings
+- The items are stored in the users' local storage, and the user can delete them by following these simple instructions:
+    - **Right-click** on any place on the budget app page
+    - Select **Inspect** tool
+    - Click on **Application**
+    - Click on **localhost**
+    - Right-click on expense or income
+    - Click **delete**
+
+![Step1](/img/Step1.png)
+![Step2](/img/Step2.png)
