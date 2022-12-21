@@ -5,7 +5,7 @@ import { BudgetProps,  BudgetType } from "../types/Budget";
 import BudgetForm from './BudgetForm';
 
 const Budget = ({ option, list, setList, balance }: BudgetProps) => {
-    
+    const [item, setItem] = useState  <BudgetType|undefined>(undefined)
     const deleteHandler = (id: string) => {
         setList((prev) => prev.filter(item => item.id !== id))
     }
@@ -13,7 +13,7 @@ const Budget = ({ option, list, setList, balance }: BudgetProps) => {
         <div>
             <div className="Budget-source">
                 <h1>{option}</h1>
-                <BudgetForm option={option} setList={setList} balance={ balance} />
+                <BudgetForm option={option} setList={setList} balance={ balance} item={item} />
             </div>
             <table>
                 <thead>
@@ -31,7 +31,7 @@ const Budget = ({ option, list, setList, balance }: BudgetProps) => {
                         <td>{list.source}</td>
                         <td>{list.amount}</td>
                         <td>
-                            <button>Edit</button>
+                            <button onClick={()=>setItem(list)}>Edit</button>
                             <button
                                 onClick={() => deleteHandler(list.id)}
                                 disabled={option === "Income" && balance - list.amount < 0}>
