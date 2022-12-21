@@ -9,6 +9,8 @@ This budget application aims to help users create and manage their income and ex
 
 - Click [here]() to view the app or use the app
 
+![Frontpage](/img/FrontPage.png)
+
 ## Table of content
 
 - [Technologies](#technologies)

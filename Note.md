@@ -1,4 +1,4 @@
-## Home page
+## [Home page](/README.md#budget-app)
 
 - Users select the type of their source of income or expenses and add them to the list by clicking **"ADD INCOME or ADD EXPENSE"**. The source, amount, and date are required from the user on each side of income and expense before they can insert their budget for each type.
 
