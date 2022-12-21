@@ -28,7 +28,7 @@ const TargetSaving = ({saving, transferMoney}: TargetSavingProps) => {
                 </div>
                 <div className='Source'>
                     <label htmlFor="progress" className='progress'>progress
-                        <p>{saving/target * 100 || 0}% </p>    
+                        <p>{Math.round(saving/target * 100) || 0}% </p>    
                         <progress id="file" value={saving} max={target}></progress>
                     </label>
                 </div>
