@@ -88,5 +88,21 @@ This budget application aims to help users create and manage their income and ex
 
 ## Getting started
 
+- ### `For starting the application`
+
+Runs the app in the development mode.<br />
+Open [http://localhost:3000](http://localhost:3000) to view it in the browser, 
+
+```shell
+npm start
+```
+
+- ### Run SASS
+```shell
+npm run compile
+```
+
+
+
 - Check more by clicking this [link](/Note.md#home-page):
 - Click this [link](/Note.md#delete-local-strorage-settings) to get information on how to delete localstorage
