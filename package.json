@@ -27,7 +27,8 @@
     "build": "CI = true && react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
-    "compile": "sass --watch src/scss/styles.scss:src/App.css"
+    "compile": "sass --watch src/scss/styles.scss:src/App.css",
+    "deploy": "npm run build"
   },
   "eslintConfig": {
     "extends": [
