@@ -7,7 +7,7 @@
 
 This budget application aims to help users create and manage their income and expenses and to set their saving target from their current balance to their saving account and vice versa.
 
-- Click [here]() to view the app or use the app
+- Click [here](https://femi-budget-app.netlify.app/) to view the app or use the app
 
 ![Frontpage](/img/FrontPage.png)
 
