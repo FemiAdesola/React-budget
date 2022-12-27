@@ -24,10 +24,9 @@
   },
   "scripts": {
     "start": "react-scripts start",
-    "build": "react-scripts build",
+    "build": "CI = true && react-script build",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
-    "CI ": "true && react-script build",
     "compile": "sass --watch src/scss/styles.scss:src/App.css",
     "predeploy": "npm run build",
     "deploy": "gh-pages -d build"
