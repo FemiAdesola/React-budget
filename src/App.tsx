@@ -9,10 +9,10 @@ import Header from './Components/Header';
 import { Destination } from './types/transfer';
 
 const  App = () =>{
-  // const incomeList: BudgetType[] = JSON.parse(localStorage.getItem("incomes") || "")
-  // const expenseList: BudgetType [] = JSON.parse(localStorage.getItem("expenses") || "")
-  const [incomes, setIncomes] = useState<BudgetType[]> ([])
-  const [expenses, setExpenses] = useState<BudgetType[]>([])
+  const incomeList: BudgetType[] = JSON.parse(localStorage.getItem("incomes") || "")
+  const expenseList: BudgetType [] = JSON.parse(localStorage.getItem("expenses") || "")
+  const [incomes, setIncomes] = useState<BudgetType[]> (incomeList)
+  const [expenses, setExpenses] = useState<BudgetType[]>(expenseList)
   const [balance, setBalance] = useState(0)
   const [saving, setSaving] = useState(0)
  
@@ -20,7 +20,7 @@ const  App = () =>{
     const totalIncomes = incomes.reduce((prev, current) => prev + current.amount, 0)
     const totalExpenses = expenses.reduce((prev, current) => prev + current.amount, 0)
       setBalance(totalIncomes - totalExpenses - saving)
-  }, [])
+  }, [incomes,expenses,saving])
 
   useEffect(() => {
     localStorage.setItem("incomes", JSON.stringify(incomes))
