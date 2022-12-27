@@ -19,7 +19,7 @@ const BudgetForm = ({ option, setList, balance, item, change, setChange}: Budget
             setAmount(item.amount)
             setDate(item.date)
         }
-    },[item])
+    },[change, item])
     
     const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
         e.preventDefault()

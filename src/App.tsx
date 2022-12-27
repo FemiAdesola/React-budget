@@ -20,7 +20,7 @@ const  App = () =>{
     const totalIncomes = incomes.reduce((prev, current) => prev + current.amount, 0)
     const totalExpenses = expenses.reduce((prev, current) => prev + current.amount, 0)
       setBalance(totalIncomes - totalExpenses - saving)
-  })
+  }, [])
 
   useEffect(() => {
     localStorage.setItem("incomes", JSON.stringify(incomes))

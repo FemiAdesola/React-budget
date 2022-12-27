@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React from 'react';
 
 import { BalanceProps } from '../types/Balance';
 import Transfer from './Transfer';
