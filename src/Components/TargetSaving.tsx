@@ -32,7 +32,6 @@ const TargetSaving = ({saving, transferMoney}: TargetSavingProps) => {
                         <progress id="file" value={saving} max={target}></progress>
                     </label>
                 </div>
-               
             </form>
             <hr/>
              <Transfer transferMoney={transferMoney} destination="Balance"/>
